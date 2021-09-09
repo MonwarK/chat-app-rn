@@ -4,15 +4,14 @@ import { Avatar } from 'react-native-elements'
 import { ListItem } from 'react-native-elements'
 import { TouchableOpacity } from 'react-native'
 
-const ChatListItem = ({index = 1}) => {
+const ChatListItem = ({index = 1, navigation}) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate("Chat")}>
       <ListItem bottomDivider>
         <Avatar
           rounded
           source={{
-            uri:
-              'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+            uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
           }}
         />
         <ListItem.Content>

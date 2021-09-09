@@ -4,7 +4,7 @@ import { SearchBar, SpeedDial } from 'react-native-elements'
 import ChatListItem from '../components/ChatListItem.component'
 import { SafeArea } from "../../../components/SafeArea"
 
-const ChatsScreen = () => {
+const ChatsScreen = ({ navigation }) => {
   const [isOpen, setIsOpen] = useState(false)
   const array = [1,2,3,4,5,6,7,8,9]
 
@@ -16,7 +16,7 @@ const ChatsScreen = () => {
         <FlatList
           data={array}
           renderItem={({index}) => (
-            <ChatListItem index={index} />
+            <ChatListItem navigation={navigation} index={index} />
           )}
         />
       <SpeedDial
