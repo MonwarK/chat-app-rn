@@ -1,22 +1,19 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
-import { View, Text } from 'react-native'
+import LoginScreen from '../../features/authentication/screens/LoginScreen';
+import RegisterScreen from '../../features/authentication/screens/RegisterScreen';
 
 const AuthNavigation = () => {
   const Stack = createStackNavigator();
 
-  const BasicPage = () => {
-    return (
-      <View>
-        <Text>Page</Text>
-      </View>
-    )
-  }
-
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="LoginScreen" component={BasicPage} />
-      <Stack.Screen name="RegisterScreen" component={BasicPage} />
+    <Stack.Navigator 
+      screenOptions={{
+        headerShown: false
+      }}
+    >
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Register" component={RegisterScreen} />
     </Stack.Navigator>
   )
 }

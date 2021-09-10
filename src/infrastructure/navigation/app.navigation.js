@@ -4,6 +4,7 @@ import { View, Text } from 'react-native'
 import ChatScreen from '../../features/chats/screens/chat.screen';
 import TabNavigation from './tab.navigation';
 import { AntDesign } from "@expo/vector-icons"
+import { Avatar } from 'react-native-elements';
 
 const AppNavigation = () => {
   const Stack = createStackNavigator();
@@ -19,21 +20,26 @@ const AppNavigation = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen 
-        name="TabScreen" 
+        name="TabNav" 
         component={TabNavigation} 
         options={{ title: "Chat Application" }} 
       />
       <Stack.Screen 
         name="Chat" 
-        component={ChatScreen} 
+        component={ChatScreen}
         options={{
           headerBackTitle: " ",
-          headerRight: () => (
-            <View style={{ flexDirection: "row", paddingHorizontal: 10 }}>
-              <AntDesign name="phone" style={{ marginRight: 20 }} size={24} color="blue" />
-              <AntDesign name="videocamera" size={24} color="blue" />
+          headerTitle: () => (
+            <View style={{ flexDirection: "row" }}>
+              <Avatar
+                source={{ uri: "dn\knd" }}
+                rounded
+              />
+              <View style={{ width: "100%" }}>
+                <Text>USERNAME</Text>
+              </View>
             </View>
-          )
+          ),
         }}
       />
       <Stack.Screen 

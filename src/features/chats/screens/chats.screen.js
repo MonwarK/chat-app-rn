@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FlatList, Platform, KeyboardAvoidingView } from 'react-native'
 import { SearchBar, SpeedDial } from 'react-native-elements'
-import ChatListItem from '../components/ChatListItem.component'
+import ChatListItem from '../components/chat-list-item.component'
 import { SafeArea } from "../../../components/SafeArea"
 
 const ChatsScreen = ({ navigation }) => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { SafeArea } from '../../../components/SafeArea'
-import SettingsItem from '../components/SettingsItem.component'
+import SettingsItem from '../components/settings-item.component'
 
 const SettingsScreen = () => {
   return (
